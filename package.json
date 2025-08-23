@@ -1,0 +1,26 @@
+{
+  "name": "todo-list-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CleiverMejia/todo-list-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CleiverMejia/todo-list-node/issues"
+  },
+  "homepage": "https://github.com/CleiverMejia/todo-list-node#readme",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.5",
+    "ts-jest": "^29.4.1",
+    "typescript": "^5.9.2"
+  }
+}
