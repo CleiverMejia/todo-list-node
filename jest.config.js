@@ -4,8 +4,14 @@ const tsJestTransformCfg = createDefaultPreset().transform;
 
 /** @type {import("jest").Config} **/
 module.exports = {
-  testEnvironment: "node",
-  transform: {
-    ...tsJestTransformCfg,
-  },
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  roots: ['<rootDir>/src/modules/user/test'],
+  reporters: [
+    "default",
+    [ "jest-html-reporter", {
+        pageTitle: "Test Report",
+        outputPath: `reports/test-report_${new Date().toISOString().slice(0, 10)}.html`
+      }]
+  ]
 };
