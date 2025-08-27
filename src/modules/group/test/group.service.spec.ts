@@ -2,6 +2,9 @@ import { UserService } from "c:/Users/Emerson Lopez/Downloads/todo-list-node/src
 import { GroupService } from "c:/Users/Emerson Lopez/Downloads/todo-list-node/src/modules/group/group.service";
 import { Group } from "c:/Users/Emerson Lopez/Downloads/todo-list-node/src/modules/group/group.entity";
 
+
+// Prueba unitaria realizada por Emerson Rafael Lopez Narvaez
+
 describe("GroupService", () => {
   let service: GroupService;
   const userId = 1;
@@ -37,7 +40,8 @@ describe("GroupService", () => {
   });
 
   test("debería lanzar error si el grupo no existe", () => {
-    expect(() => service.findOne(userId, 999)).toThrow("Grupo no encontrado");
+    expect(() => service.findOne(userId, 999)).toThrow("Group with id 999 not found for user 1"
+);
   });
 
   test("debería actualizar un grupo", () => {
