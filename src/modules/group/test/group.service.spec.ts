@@ -1,7 +1,6 @@
-import { UserService } from "c:/Users/Emerson Lopez/Downloads/todo-list-node/src/modules/user/user.service";
-import { GroupService } from "c:/Users/Emerson Lopez/Downloads/todo-list-node/src/modules/group/group.service";
-import { Group } from "c:/Users/Emerson Lopez/Downloads/todo-list-node/src/modules/group/group.entity";
-
+import { UserService } from "../../user/user.service";
+import { GroupService } from "../group.service";
+import { Group } from "../group.entity";
 
 // Prueba unitaria realizada por Emerson Rafael Lopez Narvaez
 
@@ -15,7 +14,7 @@ describe("GroupService", () => {
   });
 
   test("debería crear un grupo", () => {
-    const group: Group = service.create(userId, "Trabajo"); 
+    const group: Group = service.create(userId, "Trabajo");
     expect(group).toEqual({
       id: 1,
       uid: userId,
@@ -27,7 +26,7 @@ describe("GroupService", () => {
   test("debería obtener todos los grupos de un usuario", () => {
     const g1: Group = service.create(userId, "Trabajo");
     const g2: Group = service.create(userId, "Personal");
-    const groups: Group[] = service.findAll(userId); 
+    const groups: Group[] = service.findAll(userId);
     expect(groups).toHaveLength(2);
     expect(groups.map((g: Group) => g.name)).toContain("Trabajo");
     expect(groups.map((g: Group) => g.name)).toContain("Personal");
@@ -40,8 +39,9 @@ describe("GroupService", () => {
   });
 
   test("debería lanzar error si el grupo no existe", () => {
-    expect(() => service.findOne(userId, 999)).toThrow("Group with id 999 not found for user 1"
-);
+    expect(() => service.findOne(userId, 999)).toThrow(
+      "Group with id 999 not found for user 1"
+    );
   });
 
   test("debería actualizar un grupo", () => {
