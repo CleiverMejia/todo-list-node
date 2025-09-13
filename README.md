@@ -1,3 +1,9 @@
+# Integrantes
+
+- Daniel Correa Vega
+- Emerson Rafael Lopez Narvaez
+- Cleiver Jose Mejia Rodriguez
+
 # To-Do List con Node.js + Jest  
 
 Este repositorio contiene una aplicación sencilla de **To-Do List** desarrollada con **Node.js** y **TypeScript**.  
