@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --coverage --coverageReporters=text --coverageReporters=text-summary"
   },
   "repository": {
     "type": "git",

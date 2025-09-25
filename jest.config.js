@@ -6,7 +6,11 @@ const tsJestTransformCfg = createDefaultPreset().transform;
 module.exports = {
   preset: "ts-jest",
   testEnvironment: "node",
-  roots: ["<rootDir>/src/modules/user/test", "<rootDir>/src/modules/task/test","<rootDir>/src/modules/group/test"],
+  roots: [
+    "<rootDir>/src/modules/user/test",
+    "<rootDir>/src/modules/task/test",
+    "<rootDir>/src/modules/group/test",
+  ],
   reporters: [
     "default",
     [
@@ -19,4 +23,5 @@ module.exports = {
       },
     ],
   ],
+  coverageReporters: ["lcov", "text"],
 };
