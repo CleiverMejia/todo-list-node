@@ -28,8 +28,9 @@ describe("UserService", () => {
     expect(found).toEqual(created);
   });
 
-  test("debe lanzar un error si no encuentra al usuario", () => {
-    expect(() => service.findOne(111)).toThrow("User with id 111 not found");
+  test("debe retornar undefined si no encuentra al usuario", () => {
+    const result = service.findOne(111);
+    expect(result).toBeUndefined();
   });
 
   test("debe actualizar un usuario", () => {
@@ -37,6 +38,11 @@ describe("UserService", () => {
     const updated = service.update(created.id, "carlitos", "newu4@test.com");
     expect(updated?.name).toBe("carlitos");
     expect(updated?.email).toBe("newu4@test.com");
+  });
+
+  test("debe lanzar un error si no encuentra al usuario al actualizar", () => {
+    const updated = service.update(111, "noone", "noone@test.com");
+    expect(updated).toBeUndefined();
   });
 
   test("debe eliminar un usuario", () => {

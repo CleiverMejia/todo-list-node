@@ -9,9 +9,10 @@ export class UserService {
   }
 
   findOne(id: number): User | undefined {
-    const user = this.users.find(user => user.id === id);
-    if(!user) {
-      throw new Error(`User with id ${id} not found`);
+    const user = this.users.find((user) => user.id === id);
+    if (!user) {
+      console.log("User not found");
+      return undefined;
     }
     return user;
   }
@@ -37,7 +38,7 @@ export class UserService {
 
   remove(id: number): boolean {
     const initialLength = this.users.length;
-    this.users = this.users.filter(user => user.id !== id);
+    this.users = this.users.filter((user) => user.id !== id);
     return this.users.length < initialLength;
   }
 }

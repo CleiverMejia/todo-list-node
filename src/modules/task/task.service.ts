@@ -44,7 +44,7 @@ export class TaskService {
     const initialLength: number = this.findAll(uid).length;
 
     this.tasks = this.tasks.filter(
-      (task: Task): boolean => task.uid !== uid && task.id !== id
+      (task: Task): boolean => task.uid !== uid || task.id !== id
     );
 
     return this.findAll(uid).length < initialLength;
