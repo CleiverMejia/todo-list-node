@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "dev": "npx tsx src/index.ts",
     "build": "tsc",
     "test": "jest --coverage --coverageReporters=text --coverageReporters=text-summary"
   },
@@ -29,5 +30,8 @@
     "jest-html-reporter": "^4.3.0",
     "ts-jest": "^29.4.1",
     "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "typescript-eslint": "^8.45.0"
   }
 }

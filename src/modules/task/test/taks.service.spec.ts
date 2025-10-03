@@ -60,7 +60,7 @@ describe("TaskService", (): void => {
   });
 
   test("debe eliminar una tarea que no existe de un usuario", () => {
-    const task: Task = service.create(userId, "Titulo", "Contenido");
+    service.create(userId, "Titulo", "Contenido");
     const taskDeleted: boolean = service.delete(userId, 999);
     expect(taskDeleted).toBe(false);
     expect(service.findAll(userId).length).toBe(1);

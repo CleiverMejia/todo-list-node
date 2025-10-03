@@ -1,4 +1,3 @@
-import { UserService } from "../../user/user.service";
 import { GroupService } from "../group.service";
 import { Group } from "../group.entity";
 
@@ -9,7 +8,6 @@ describe("GroupService", () => {
   const userId = 1;
 
   beforeEach(() => {
-    const userService: UserService = new UserService();
     service = new GroupService();
   });
 
@@ -24,8 +22,8 @@ describe("GroupService", () => {
   });
 
   test("debería obtener todos los grupos de un usuario", () => {
-    const g1: Group = service.create(userId, "Trabajo");
-    const g2: Group = service.create(userId, "Personal");
+    service.create(userId, "Trabajo");
+    service.create(userId, "Personal");
     const groups: Group[] = service.findAll(userId);
     expect(groups).toHaveLength(2);
     expect(groups.map((g: Group) => g.name)).toContain("Trabajo");
