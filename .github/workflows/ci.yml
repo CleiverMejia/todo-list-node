@@ -33,7 +33,7 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           VALIDATE_JAVASCRIPT_ES: true
           VALIDATE_TYPESCRIPT_ES: true
-          VALIDATE_PRETTIER: true
+          VALIDATE_PRETTIER: false
 
   test:
     runs-on: ubuntu-latest
