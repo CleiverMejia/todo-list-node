@@ -30,8 +30,8 @@ export class UserService {
   update(id: number, name: string, email: string): User | undefined {
     const user = this.findOne(id);
     if (user) {
-      user.name = name;
-      user.email = email;
+      user.name = name ?? user.name;
+      user.email = email ?? user.email;
     }
     return user;
   }
