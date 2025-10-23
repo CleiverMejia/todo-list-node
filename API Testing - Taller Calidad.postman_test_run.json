@@ -1,0 +1,577 @@
+{
+	"id": "57def140-332d-44b3-9ea9-a65634a6f915",
+	"name": "API Testing - Taller Calidad",
+	"timestamp": "2025-10-23T21:12:16.224Z",
+	"collection_id": "44376691-2c3c8b5e-1b4f-4b81-bd1f-613b34a6534c",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 30,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-10-23T21:12:14.562Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "7317afed-987a-4a5d-9679-825c9bc8ab99",
+			"name": "Get Tasks",
+			"url": "http://localhost:3000/task/1",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "d8fcfed8-6c50-4168-aad3-9e2647855a3c",
+			"name": "Get Task",
+			"url": "http://localhost:3000/task/1/1",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 200 or 404": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 or 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 200 or 404": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "d7c637e6-62d7-42cd-9d78-0977e1f24eed",
+			"name": "Post Task",
+			"url": "http://localhost:3000/task/1",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "43e0a87c-1196-4206-b1d1-6e426596c9c3",
+			"name": "Put Task",
+			"url": "http://localhost:3000/task/1/1",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 200 or 404": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 or 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 200 or 404": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "dec9cc89-a1fc-4144-9a2b-354ed3e5b981",
+			"name": "Delete Task",
+			"url": "http://localhost:3000/task/1/1",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "f6c21216-2e06-4bb6-8688-6dc41e91b353",
+			"name": "Get Groups",
+			"url": "http://localhost:3000/group/1",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "b3f9753f-6691-432d-b4b9-bb0c89135aa9",
+			"name": "Get Group",
+			"url": "http://localhost:3000/group/1/1",
+			"time": 2,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 200 or 404": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 or 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Status code is 200 or 404": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "13dc8497-1045-42fe-abe5-388e4194b655",
+			"name": "Post Group",
+			"url": "http://localhost:3000/group/1",
+			"time": 2,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "22a3a78f-22cb-4150-80c6-0258763014dd",
+			"name": "Put Group",
+			"url": "http://localhost:3000/group/1/1",
+			"time": 3,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 200 or 404": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 or 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 200 or 404": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "ffe8752f-b3ae-48a9-98fa-ef29b2ce7f3b",
+			"name": "Delete Group",
+			"url": "http://localhost:3000/group/1/1",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "8bfd84b4-e4f0-43c6-99ef-72e60aa811ac",
+			"name": "Get Users",
+			"url": "http://localhost:3000/user",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "c5d1a6c8-3ff0-4c33-bb07-8d7219bab5c4",
+			"name": "Get User",
+			"url": "http://localhost:3000/user/1",
+			"time": 4,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 200 or 404": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 or 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 200 or 404": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "d4f34c8c-173b-409d-bc1e-591303b04748",
+			"name": "Post User",
+			"url": "http://localhost:3000/user",
+			"time": 3,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "66e2e87b-942d-4e69-a56c-675e9a1764fd",
+			"name": "Put User",
+			"url": "http://localhost:3000/user/1",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		},
+		{
+			"id": "d56d30e5-2bb2-4a4a-87ed-23215ac4fbde",
+			"name": "Delete User",
+			"url": "http://localhost:3000/user/1",
+			"time": 2,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 800ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 800ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 800ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 42,
+	"collection": {
+		"requests": [
+			{
+				"id": "7317afed-987a-4a5d-9679-825c9bc8ab99",
+				"method": "GET"
+			},
+			{
+				"id": "d8fcfed8-6c50-4168-aad3-9e2647855a3c",
+				"method": "GET"
+			},
+			{
+				"id": "d7c637e6-62d7-42cd-9d78-0977e1f24eed",
+				"method": "POST"
+			},
+			{
+				"id": "43e0a87c-1196-4206-b1d1-6e426596c9c3",
+				"method": "PUT"
+			},
+			{
+				"id": "dec9cc89-a1fc-4144-9a2b-354ed3e5b981",
+				"method": "DELETE"
+			},
+			{
+				"id": "f6c21216-2e06-4bb6-8688-6dc41e91b353",
+				"method": "GET"
+			},
+			{
+				"id": "b3f9753f-6691-432d-b4b9-bb0c89135aa9",
+				"method": "GET"
+			},
+			{
+				"id": "13dc8497-1045-42fe-abe5-388e4194b655",
+				"method": "POST"
+			},
+			{
+				"id": "22a3a78f-22cb-4150-80c6-0258763014dd",
+				"method": "PUT"
+			},
+			{
+				"id": "ffe8752f-b3ae-48a9-98fa-ef29b2ce7f3b",
+				"method": "DELETE"
+			},
+			{
+				"id": "8bfd84b4-e4f0-43c6-99ef-72e60aa811ac",
+				"method": "GET"
+			},
+			{
+				"id": "c5d1a6c8-3ff0-4c33-bb07-8d7219bab5c4",
+				"method": "GET"
+			},
+			{
+				"id": "d4f34c8c-173b-409d-bc1e-591303b04748",
+				"method": "POST"
+			},
+			{
+				"id": "66e2e87b-942d-4e69-a56c-675e9a1764fd",
+				"method": "PUT"
+			},
+			{
+				"id": "d56d30e5-2bb2-4a4a-87ed-23215ac4fbde",
+				"method": "DELETE"
+			}
+		]
+	}
+}

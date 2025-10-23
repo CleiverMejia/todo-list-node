@@ -34,8 +34,8 @@ export class TaskService {
   public update(uid: number, id: number, title: string, content: string): Task {
     const task = this.findOne(uid, id);
 
-    task.title = title ?? task.title;
-    task.content = content ?? task.content;
+    task.title = title;
+    task.content = content;
 
     return task;
   }

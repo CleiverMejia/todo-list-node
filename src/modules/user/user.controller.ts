@@ -78,7 +78,7 @@ export class UserController {
     try {
       const { id } = req.params;
 
-      if (!req.body) {
+      if (!req.body || !req.body.name || !req.body.email) {
         res.status(400).json({
           success: false,
           error: "Bad request",

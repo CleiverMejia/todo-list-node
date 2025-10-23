@@ -81,7 +81,7 @@ export class GroupController {
     try {
       const { uid, id } = req.params;
 
-      if (!req.body) {
+      if (!req.body || !req.body.name) {
         res.status(400).json({
           success: false,
           error: "Bad request",
@@ -98,7 +98,16 @@ export class GroupController {
         success: true,
         data: group,
       });
-    } catch {
+    } catch (error) {
+      if (error instanceof Error && error.message.startsWith("Group")) {
+        res.status(404).json({
+          success: false,
+          error: "Group not found",
+        });
+
+        return;
+      }
+
       res.status(500).json({
         success: false,
         error: "Internal server error",

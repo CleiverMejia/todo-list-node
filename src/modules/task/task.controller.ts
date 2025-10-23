@@ -81,7 +81,7 @@ export class TaskController {
     try {
       const { uid, id } = req.params;
 
-      if (!req.body) {
+      if (!req.body || !req.body.title || !req.body.content) {
         res.status(400).json({
           success: false,
           error: "Bad request",
@@ -98,7 +98,16 @@ export class TaskController {
         success: true,
         data: task,
       });
-    } catch {
+    } catch (error) {
+      if (error instanceof Error && error.message.startsWith("Task")) {
+        res.status(404).json({
+          success: false,
+          error: "Task not found",
+        });
+
+        return;
+      }
+
       res.status(500).json({
         success: false,
         error: "Internal server error",

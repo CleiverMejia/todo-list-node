@@ -30,7 +30,7 @@ export class GroupService {
 
   update(uid: number, id: number, name: string): Group {
     const group = this.findOne(uid, id);
-    group.name = name ?? group.name;
+    group.name = name;
     return group;
   }
 
