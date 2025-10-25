@@ -4,12 +4,17 @@
 - Emerson Rafael Lopez Narvaez
 - Cleiver Jose Mejia Rodriguez
 
-# To-Do List con Node.js + Jest  
+# API To-Do List con Express, Node.js y Jest  
 
-Este repositorio contiene una aplicación sencilla de **To-Do List** desarrollada con **Node.js** y **TypeScript**.  
-El propósito principal no es la funcionalidad de la lista en sí, sino mostrar cómo implementar y ejecutar **pruebas unitarias con Jest**.  
+Este repositorio contiene una **API REST** de **To-Do List** desarrollada con **Express**, **Node.js** y **TypeScript**.  
+El propósito principal es mostrar cómo estructurar una API modular y cómo implementar y ejecutar **pruebas unitarias con Jest**.  
 
-No se utiliza ninguna base de datos. Toda la información se gestiona en **arrays** y archivos **JSON** para mantenerlo simple y enfocado en el testing.  
+La API está dividida en módulos:
+- **Task**: Manejo de tareas (crear, listar, actualizar y eliminar).  
+- **Group**: Gestión de grupos de tareas.  
+- **User**: Administración básica de usuarios.  
+
+No se utiliza ninguna base de datos. Toda la información se gestiona en **arrays**, manteniendo el proyecto simple y centrado en el testing y la arquitectura modular.  
 
 ---
 
@@ -19,15 +24,15 @@ No se utiliza ninguna base de datos. Toda la información se gestiona en **array
 
 ---
 
-###  Ejecutar el proyecto  
+### Ejecutar el proyecto  
 
 ```bash
 npm install
-npx tsx .\src\index.ts
+npm run dev
 ```
 
-##  Ejecutar pruebas de testing
+### Ejecutar pruebas de testing
 
-```batch
+```bash
 npm run test
 ```
